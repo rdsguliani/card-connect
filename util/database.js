@@ -8,6 +8,7 @@ const PASSWORD = process.env.password || 'password';
 const HOST = process.env.host || 'localhost';
 
 mysql.createConnection({
+    host: HOST,
     user     : USER_NAME,
     password : PASSWORD
 }).then( (connection) => {
