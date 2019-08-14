@@ -42,7 +42,7 @@ User.hasOne(UserAuth);
 UserAuth.belongsTo(User);
 User.hasOne(Card);
 
-const PORT = process.env.port || 3000;
+const PORT = 3000;
 sequelize
     // .sync({force: true})
     .sync()
