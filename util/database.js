@@ -3,8 +3,8 @@ const mysql = require('mysql2/promise');
 const Sequelize = require('sequelize');
 
 const DB_NAME = process.env.db || 'cc_test';
-const USER_NAME = process.env.dbUser || 'root';
-const PASSWORD = process.env.dbPassword || 'password';
+const USER_NAME = process.env.user || 'root';
+const PASSWORD = process.env.password || 'password';
 const HOST = process.env.host || 'localhost';
 
 mysql.createConnection({
@@ -19,9 +19,9 @@ mysql.createConnection({
 
 const sequelize =  new Sequelize({
     database: DB_NAME,
-    username: 'root',
-    password: 'password',
-    host: 'localhost',
+    username: USER_NAME,
+    password: PASSWORD,
+    host: HOST,
     dialect: 'mysql',
     port: 3306
 });
